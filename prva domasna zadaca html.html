@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+<meta charset="UTF-8">
+<title>Контролен панел за паметен дом</title>
+</head>
+
+<body>
+
+<header>
+    <h1>Контролен панел за паметен дом</h1>
+</header>
+
+<nav>
+    <a href="#bedroom">Спална</a>
+    <a href="#living">Дневна</a>
+    <a href="#kitchen">Кујна</a>
+    <a href="#garden">Градина</a>
+    <a href="#notifications">Известувања</a>
+</nav>
+
+<div class="room" id="bedroom">
+<h2>Спална соба</h2>
+<div class="sensors">
+
+<div class="sensor">
+<h3>Температура</h3>
+<p>Вредност: 22 °C</p>
+<p>Батерија: 90%</p>
+<p>Статус: Нормално</p>
+<button onclick="toggleSensor(this)">ON</button>
+</div>
+
+<div class="sensor">
+<h3>Влажност</h3>
+<p>Вредност: 45%</p>
+<p>Батерија: 80%</p>
+<p>Статус: Нормално</p>
+<button onclick="toggleSensor(this)">ON</button>
+</div>
+
+<div class="sensor">
+<h3>Движење</h3>
+<p>Вредност: Нема движење</p>
+<p>Батерија: 75%</p>
+<p>Статус: Активен</p>
+<button onclick="toggleSensor(this)">ON</button>
+</div>
+
+</div>
+</div>
+
+<div class="room" id="living">
+<h2>Дневна соба</h2>
+<div class="sensors">
+
+<div class="sensor">
+<h3>Температура</h3>
+<p>Вредност: 24 °C</p>
+<p>Батерија: 85%</p>
+<p>Статус: Нормално</p>
+<button onclick="toggleSensor(this)">ON</button>
+</div>
+
+<div class="sensor">
+<h3>Светлина</h3>
+<p>Вредност: 450 lux</p>
+<p>Батерија: 70%</p>
+<p>Статус: Нормално</p>
+<button onclick="toggleSensor(this)">ON</button>
+</div>
+
+<div class="sensor">
+<h3>Квалитет на воздух</h3>
+<p>Вредност: 35 AQI</p>
+<p>Батерија: 95%</p>
+<p>Статус: Добар</p>
+<button onclick="toggleSensor(this)">ON</button>
+</div>
+
+</div>
+</div>
+
+<div class="room" id="kitchen">
+<h2>Кујна</h2>
+<div class="sensors">
+
+<div class="sensor">
+<h3>Температура</h3>
+<p>Вредност: 25 °C</p>
+<p>Батерија: 80%</p>
+<p>Статус: Нормално</p>
+<button onclick="toggleSensor(this)">ON</button>
+</div>
+
+<div class="sensor">
+<h3>Гас</h3>
+<p>Вредност: Нема истекување</p>
+<p>Батерија: 60%</p>
+<p>Статус: Безбедно</p>
+<button onclick="toggleSensor(this)">ON</button>
+</div>
+
+<div class="sensor">
+<h3>Истекување вода</h3>
+<p>Вредност: Суво</p>
+<p>Батерија: 55%</p>
+<p>Статус: Безбедно</p>
+<button onclick="toggleSensor(this)">ON</button>
+</div>
+
+</div>
+</div>
+
+<div class="room" id="garden">
+<h2>Градина</h2>
+<div class="sensors">
+
+<div class="sensor">
+<h3>Влажност на почва</h3>
+<p>Вредност: 28%</p>
+<p>Батерија: 85%</p>
+<p>Статус: Ниска влажност</p>
+<button onclick="toggleSensor(this)">ON</button>
+</div>
+
+<div class="sensor">
+<h3>Надворешна температура</h3>
+<p>Вредност: 19 °C</p>
+<p>Батерија: 90%</p>
+<p>Статус: Нормално</p>
+<button onclick="toggleSensor(this)">ON</button>
+</div>
+
+<div class="sensor">
+<h3>Дожд</h3>
+<p>Вредност: Нема дожд</p>
+<p>Батерија: 65%</p>
+<p>Статус: Нормално</p>
+<button onclick="toggleSensor(this)">ON</button>
+</div>
+
+</div>
+</div>
+
+<div class="notifications" id="notifications">
+<h2>Известувања</h2>
+
+<details>
+<summary>Предупредување за градината</summary>
+<p>Влажноста на почвата е 28%. Потребно е наводнување.</p>
+</details>
+
+<br>
+
+<details>
+<summary>Статус на сензорите</summary>
+<p>Сите останати сензори работат нормално.</p>
+</details>
+</div>
+
+<script>
+function toggleSensor(button) {
+    if (button.innerHTML == "ON") {
+        button.innerHTML = "OFF";
+        button.classList.add("off");
+    } else {
+        button.innerHTML = "ON";
+        button.classList.remove("off");
+    }
+}
+</script>
+
+</body>
+</html>
